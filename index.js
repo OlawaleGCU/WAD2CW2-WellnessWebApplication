@@ -97,6 +97,7 @@ app.post("/view", function (req, res) {
 const router = require('./routes/fitnessappRoutes');
 app.use('/', router);
 
-app.listen(process.env.PORT ||3000, () => {
-    console.log('Server started. Ctrl^c to quit.');
-    })  
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+});
