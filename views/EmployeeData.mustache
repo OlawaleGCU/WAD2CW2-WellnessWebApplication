@@ -1,0 +1,20 @@
+<html>
+  <head>
+    {{>header}}
+  </head>
+  <body>
+  {{#employee}}
+  <div class="card">
+    <div class="card-body">
+          <h4 class="card-title">Goal Record</h4>
+          <p class="card-text">
+              Name :{{name}} 
+          </p>
+          <p class="card-text">
+              Goal ID :{{_id}}
+          </p>
+    </div>
+  </div>
+  {{/employee}} 
+  </body>
+</html>

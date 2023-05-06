@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<a id="logout" href="/logout" class="btn btn-primary">
+    Sign out
+  </a>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Healthy Lifestyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">Healthy Lifestyle</h1>
+                    <p class="fs-4">Use this interface to interact with the healthy lifestyle section.</p>
+                </div>
+
+                <div class="bannerDiv">
+                    <nav class="flexNav">
+                        <ul class="active"><a href="home.html">HOME</a></ul>
+                        <ul class="active"><a href="nutrition.html">NUTRITION</a></ul>
+                        <ul class="active"><a href="fitness.html">FITNESS</a></ul>
+                        <ul class="active"><a href="healthylifestyle.html">LIFESTYLE</a></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container px-lg-5">
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+            <div class="m-4 m-lg-5">
+                <h2 class="fs-4 fw-bold">Healthy Lifestyle Explained</h2>
+
+                <hr>
+                <p class="fs-4">Individuals must adopt behaviours and habits that promote physical, mental, and
+                    emotional well-being to create a healthy lifestyle. It includes daily choices and actions to prevent
+                    chronic diseases and promote optimal health. An active lifestyle is vital to maintaining a healthy
+                    weight, improving cardiovascular health, and reducing the risk of chronic diseases such as diabetes
+                    and heart disease. Regular exercise, such as brisk walking, running, swimming, or weightlifting, can
+                    contribute to maintaining a healthy weight, improving cardiovascular health, and reducing the risk
+                    of chronic diseases.</p>
+                <p class="fs-4">The importance of maintaining good health cannot be overstated in terms of eating a
+                    healthy and balanced diet. This means consuming various nutrient-dense foods, such as whole grains,
+                    fruits, vegetables, lean protein sources, and healthy fats, while limiting processed foods, sugary
+                    drinks, and excessive sodium and saturated fat consumption. It is important to get enough sleep each
+                    night and to take regular breaks to rest and recharge throughout the day in order to maintain good
+                    health.</p>
+                <p class="fs-4">Managing stress can also be accomplished by practising relaxation techniques such as
+                    meditation, yoga, or deep breathing exercises. In addition, you can engage in activities that bring
+                    joy and relaxation to your life. Keeping healthy also involves staying away from harmful substances
+                    such as tobacco, alcohol, and drugs. These substances can negatively impact your physical and mental
+                    health, as well as increase your health risks. Maintaining social connections and participating in
+                    activities that bring joy and fulfilment are equally essential for overall health and well-being.
+                    Strong social connections can reduce stress, improve mental health, and provide a sense of belonging
+                    and support.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <section class="pt-4">
+        <div class="container ">
+            <div class="row row-cols-2">
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-plus-square-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Add a personal goal</h2>
+                            <form action="/add" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Choose a personal goal that will help you maintain a healthy lifestyle</label>
+                                        <select id="nutgoals" name="name" required>
+                                            <option></option>
+                                            <option value="improve sleep">Improving sleeping habits</option>
+                                            <option value="reduce stress">Reduce stress levels</option>
+                                            <option value="quit smoking/vaping">Quit smoking or vaping</option>
+                                            <option value="limit alcohol">Limit alcohol consumption</option>
+                                            <option value="improve hygiene">Practice good oral hygiene</option>
+                                            <option value="increase exercise">Increase your physical activities</option>
+                                        </select>
+
+
+                                        <br /><br /><br /><br />
+
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-cloud-upload-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Update a goal</h2>
+                            <form action="/update" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Goal ID</label>
+                                        <input class="form-control" type="text" id="id" name="_id" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">New Goal</label>
+                                        <select id="nutgoals" name="name" required>
+                                            <option></option>
+                                            <option value="improve sleep">Improving sleeping habits</option>
+                                            <option value="reduce stress">Reduce stress levels</option>
+                                            <option value="quit smoking/vaping">Quit smoking or vaping</option>
+                                            <option value="limit alcohol">Limit alcohol consumption</option>
+                                            <option value="improve hygiene">Practice good oral hygiene</option>
+                                            <option value="increase exercise">Increase your physical activities</option>
+                                        </select>
+
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-dash-square-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Delete a goal</h2>
+                            <form action="/delete" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Goal ID</label>
+                                        <input class="form-control" type="text" id='empID' name="id" required>
+                                        <br><br>
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                    <br><br><br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">Show all goals</h2>
+                            <form action="/showAll" method="POST">
+                                <fieldset>
+                                    <button class="btn btn-primary" type="submit">Show All</button>
+                                    <br><br><br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">Review personal achievemnets</h2>
+                            <form action="/showAll" method="POST">
+                                <fieldset>
+                                    <button class="btn btn-primary" type="submit">Show All Achievements</button>
+                                    <br><br><br>
+                                </fieldset>
+                        </div>
+                    </div>
+    </section>
+</body>
+
+</html>

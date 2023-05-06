@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <a id="logout" href="/logout" class="btn btn-primary">
+    Sign out
+  </a>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Nutrition</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">Nutrition</h1>
+                    <p class="fs-4">Use this interface to interact with the nutrition section.</p>
+                </div>
+
+                <div class="bannerDiv">
+                    <nav class="flexNav">
+                        <ul class="active"><a href="home.html">HOME</a></ul>
+                        <ul class="active"><a href="nutrition.html">NUTRITION</a></ul>
+                        <ul class="active"><a href="fitness.html">FITNESS</a></ul>
+                        <ul class="active"><a href="healthylifestyle.html">LIFESTYLE</a></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container px-lg-5">
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+            <div class="m-4 m-lg-5">
+                <h2 class="fs-4 fw-bold">Nutrition Explained</h2>
+
+                <hr>
+                <p class="fs-4">Food nutrition studies how food affects the body and how it uses its nutrients to
+                    maintain health, grow, and function properly. It involves studying the nutrients present in food,
+                    the way they are digested by the body, and how food affects health.</p>
+                <p class="fs-4">Food contains nutrients essential for our bodies to function properly: carbohydrates,
+                    proteins, fats, vitamins, minerals, and water. As well as providing energy, building and repairing
+                    tissues, regulating body processes, and supporting immunity, nutrients play a specific role in the
+                    body. A balanced diet should include foods from all the major nutrient groups in appropriate amounts
+                    to maintain good health and prevent chronic diseases. The best way to achieve this is by consuming
+                    adequate amounts of whole grains, lean protein sources, healthy fats, fruits, vegetables, and
+                    low-fat dairy products.</p>
+                <p class="fs-4">In addition to nutrition, food safety and food preparation are also important factors
+                    for preventing foodborne illnesses and maintaining food quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <section class="pt-4">
+        <div class="container ">
+            <div class="row row-cols-2">
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-plus-square-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Add a personal goal</h2>
+                            <form action="/add" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Choose a personal goal to increase the nutrition you take in daily</label>
+                                        <select id="nutgoals" name="name" required>
+                                            <option></option>
+                                            <option value="increase fruit & vedg">increase your daily intake of fruit and vegitables</option>
+                                            <option value="decrease sugar">Decrease your intake of added sugars</option>
+                                            <option value="increase protien">increase your intake of lean protien
+                                            </option>
+                                            <option value="decrease fats">Decrease your intake of trans fats</option>
+                                            <option value="increase grains">Increase your intake of whole grains
+                                            </option>
+                                            <option value="stay hydrated">Drink enough water to stay hydrated</option>
+                                        </select>
+
+
+                                        <br /><br /><br /><br />
+
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-cloud-upload-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Update a goal</h2>
+                            <form action="/update" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Goal ID</label>
+                                        <input class="form-control" type="text" id="id" name="_id" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">New Goal</label>
+                                        <select id="nutgoals" name="name" required>
+                                            <option></option>
+                                            <option value="increase fruit & vedg">increase your daily intake of fruit and vegitables</option>
+                                            <option value="decrease sugar">Decrease your intake of added sugars</option>
+                                            <option value="increase protien">increase your intake of lean protien
+                                            </option>
+                                            <option value="decrease fats">Decrease your intake of trans fats</option>
+                                            <option value="increase grains">Increase your intake of whole grains
+                                            </option>
+                                            <option value="stay hydrated">Drink enough water to stay hydrated</option>
+                                        </select>
+
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-dash-square-fill"></i></div>
+                            <h2 class="fs-4 fw-bold">Delete a goal</h2>
+                            <form action="/delete" method="POST">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <label class="form-label">Goal ID</label>
+                                        <input class="form-control" type="text" id='empID' name="id" required>
+                                        <br><br>
+                                    </div>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                    <br><br><br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">Show all goals</h2>
+                            <form action="/showAll" method="POST">
+                                <fieldset>
+                                    <button class="btn btn-primary" type="submit">Show All</button>
+                                    <br><br><br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-filter-square-fill"></i></i></div>
+                            <h2 class="fs-4 fw-bold">Review personal achievemnets</h2>
+                            <form action="/showAll" method="POST">
+                                <fieldset>
+                                    <button class="btn btn-primary" type="submit">Show All Achievements</button>
+                                    <br><br><br>
+                                </fieldset>
+                        </div>
+        </div>
+    </section>
+</body>
+
+</html>
