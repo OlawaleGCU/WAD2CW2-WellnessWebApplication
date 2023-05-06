@@ -26,7 +26,6 @@
     "nedb": "^1.8.0",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlawaleGCU/WAD2CW2-WellnessWebApplication.git"
