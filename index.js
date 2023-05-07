@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 3000;
 const nedb = require("nedb");
 const express = require('express');
 const path = require("path");
@@ -97,7 +98,6 @@ app.post("/view", function (req, res) {
 const router = require('./routes/fitnessappRoutes');
 app.use('/', router);
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 console.log(`Server is listening on port ${PORT}`);
 });
